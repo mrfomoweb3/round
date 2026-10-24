@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a1128;
+  --color-forest: #0f3d1c;
+  --color-leaf: #2fbf5b;
+  --color-leaf-light: #6fe08f;
+  --color-mint: #eefef2;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Green gradient from the design: dark forest at the top fading to mint, then plain mint below. */
+body {
+  background: var(--color-mint) url("/bg.png") top center / 100% 1150px no-repeat;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-size: 100% 1350px;
+  }
+}

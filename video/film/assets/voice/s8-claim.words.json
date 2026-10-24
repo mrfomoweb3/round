@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w0",
+    "text": "No",
+    "start": 0.299,
+    "end": 0.512
+  },
+  {
+    "id": "w1",
+    "text": "admin.",
+    "start": 0.555,
+    "end": 1.045
+  },
+  {
+    "id": "w2",
+    "text": "No",
+    "start": 1.237,
+    "end": 1.408
+  },
+  {
+    "id": "w3",
+    "text": "middleman.",
+    "start": 1.451,
+    "end": 2.027
+  },
+  {
+    "id": "w4",
+    "text": "The",
+    "start": 2.389,
+    "end": 2.4747
+  },
+  {
+    "id": "w5",
+    "text": "group",
+    "start": 2.517,
+    "end": 2.688
+  },
+  {
+    "id": "w6",
+    "text": "stays",
+    "start": 2.816,
+    "end": 3.1147
+  },
+  {
+    "id": "w7",
+    "text": "whole.",
+    "start": 3.243,
+    "end": 3.6105668934240365
+  }
+]

@@ -1,0 +1,188 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+    #s6-plate {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 1500px no-repeat;
+    }
+    #s6-world {
+      position: absolute;
+      inset: 0;
+    }
+    #s6-art {
+      position: absolute;
+      inset: 0;
+    }
+    .s6-seat {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      margin: -66px 0 0 -66px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0a1128;
+      font-size: 52px;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 40px rgba(10, 45, 15, 0.28);
+      z-index: 2;
+    }
+    #s6-seat2 {
+      background: #6fe08f;
+    }
+    #s6-seat1-dark {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #3f1a1a;
+      border: 4px solid #f87171;
+      opacity: 0;
+    }
+    .s6-num {
+      position: relative;
+    }
+    #s6-tag {
+      position: absolute;
+      left: 1390px;
+      top: 186px;
+      font-size: 30px;
+      font-weight: 500;
+      color: #ffffff;
+      opacity: 0;
+    }
+    #s6-pot {
+      position: absolute;
+      left: 1300px;
+      top: 540px;
+      width: 300px;
+      height: 300px;
+      margin: -150px 0 0 -150px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      box-shadow: 0 24px 60px rgba(10, 45, 15, 0.3);
+      z-index: 3;
+    }
+    #s6-sum {
+      font-size: 84px;
+      font-weight: 600;
+      color: #0a1128;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    #s6-pot-label {
+      font-size: 30px;
+      color: #57534e;
+      margin-top: 6px;
+    }
+    .s6-coin {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      margin: -36px 0 0 -36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 5px solid #2fbf5b;
+      color: #0f3d1c;
+      font-size: 34px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      z-index: 1;
+    }
+    #s6-eyebrow {
+      position: absolute;
+      left: 140px;
+      top: 330px;
+      font-size: 44px;
+      font-weight: 500;
+      color: #6fe08f;
+      opacity: 0;
+    }
+    #s6-title {
+      position: absolute;
+      left: 140px;
+      top: 400px;
+      font-size: 104px;
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+      line-height: 1.08;
+    }
+    .s6-w {
+      display: inline-block;
+      opacity: 0;
+    }
+  </style>
+  <div data-hf-id="hf-7obi" id="root" data-composition-id="s6" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-qzg5" id="s6-plate"></div>
+    <div data-hf-id="hf-sixh" id="s6-world">
+      <svg data-hf-id="hf-3ore" id="s6-art" viewBox="0 0 1920 1080" data-layout-ignore>
+        <circle data-hf-id="hf-6pos" cx="1300" cy="540" r="330" fill="none" stroke="#6fe08f" stroke-width="22" />
+        <circle data-hf-id="hf-r5yd" id="s6-slot" cx="1300" cy="318" r="36" fill="none" stroke="#f87171" stroke-width="4" stroke-dasharray="10 8" opacity="0" />
+        <g data-hf-id="hf-8tds" id="s6-x" opacity="0" stroke="#f87171" stroke-width="7" stroke-linecap="round">
+          <line data-hf-id="hf-q81n" x1="1284" y1="302" x2="1316" y2="334" />
+          <line data-hf-id="hf-dvqr" x1="1316" y1="302" x2="1284" y2="334" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-keso" id="s6-pot"><div data-hf-id="hf-k0xc" id="s6-sum">$0</div><div data-hf-id="hf-7u02" id="s6-pot-label">round 2 pot</div></div>
+      <div data-hf-id="hf-663n" class="s6-coin" id="s6-coin3" style="left: 1300px; top: 870px">$</div>
+      <div data-hf-id="hf-6mg2" class="s6-coin" id="s6-coin4" style="left: 970px; top: 540px">$</div>
+      <div data-hf-id="hf-65nz" class="s6-seat" id="s6-seat1" style="left: 1300px; top: 210px"><div data-hf-id="hf-hjm6" id="s6-seat1-dark"></div><span data-hf-id="hf-0vh1" class="s6-num" id="s6-n1">1</span></div>
+      <div data-hf-id="hf-8euk" class="s6-seat" id="s6-seat2" style="left: 1630px; top: 540px">2</div>
+      <div data-hf-id="hf-lzni" class="s6-seat" style="left: 1300px; top: 870px">3</div>
+      <div data-hf-id="hf-akzj" class="s6-seat" style="left: 970px; top: 540px">4</div>
+      <div data-hf-id="hf-f1nt" id="s6-tag">took $300 in round 1</div>
+    </div>
+    <div data-hf-id="hf-bnz5" id="s6-eyebrow">Round 2 · member 2 receives</div>
+    <div data-hf-id="hf-0nnr" id="s6-title"><span data-hf-id="hf-by2q" class="s6-w" id="s6-w1">Member</span> <span data-hf-id="hf-wqym" class="s6-w" id="s6-w2">1</span><br data-hf-id="hf-x5px" /><span data-hf-id="hf-aizc" class="s6-w" id="s6-w3">skips.</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+    const word = (sel, t) =>
+      tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, t);
+
+    // back to the circle: the ring arrives from the cut, blurred, and sharpens
+    tl.fromTo("#s6-world", { scale: 1.06, filter: "blur(14px)" }, { scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#s6-eyebrow", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.35);
+    word("#s6-w1", V + 1.07);
+    word("#s6-w2", V + 1.37);
+    tl.fromTo("#s6-tag", { opacity: 0, filter: "blur(6px)" }, { opacity: 0.92, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, V + 2.09);
+
+    // members 3 and 4 pay
+    const sum = document.querySelector("#s6-sum");
+    const pay = (coin, fx, fy, t) => {
+      tl.fromTo(coin, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.12, ease: "power2.out" }, t);
+      tl.to(coin, { x: 1300 - fx, duration: 0.5, ease: "power2.inOut" }, t);
+      tl.to(coin, { y: 540 - fy, duration: 0.5, ease: "power3.in" }, t);
+      tl.to(coin, { opacity: 0, scale: 0.6, duration: 0.08, ease: "power2.in" }, t + 0.44);
+    };
+    pay("#s6-coin3", 1300, 870, V + 2.82);
+    pay("#s6-coin4", 970, 540, V + 3.07);
+    [[V + 3.32, "$100"], [V + 3.57, "$200"]].forEach(([t, v]) => {
+      tl.set(sum, { textContent: v }, t);
+      tl.fromTo("#s6-pot", { scale: 1.06 }, { scale: 1, duration: 0.3, ease: "expo.out" }, t);
+    });
+
+    // member 1's payment never comes
+    word("#s6-w3", V + 3.33);
+    tl.fromTo("#s6-slot", { opacity: 0, attr: { "stroke-dashoffset": 60 } }, { opacity: 1, attr: { "stroke-dashoffset": 0 }, duration: 0.5, ease: "power2.out" }, V + 3.4);
+    tl.set("#s6-x", { opacity: 1 }, V + 4.02);
+    tl.fromTo("#s6-x", { scale: 1.4, transformOrigin: "1300px 318px" }, { scale: 1, duration: 0.25, ease: "expo.out" }, V + 4.02);
+    tl.to("#s6-seat1-dark", { opacity: 1, duration: 0.3, ease: "power2.out" }, V + 4.02);
+    tl.to("#s6-n1", { color: "#f87171", duration: 0.3 }, V + 4.02);
+
+    window.__timelines["s6"] = tl;
+  </script>
+</template>

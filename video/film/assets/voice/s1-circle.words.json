@@ -1,0 +1,110 @@
+[
+  {
+    "id": "w0",
+    "text": "Four",
+    "start": 0.256,
+    "end": 0.512
+  },
+  {
+    "id": "w1",
+    "text": "friends.",
+    "start": 0.597,
+    "end": 1.173
+  },
+  {
+    "id": "w2",
+    "text": "A",
+    "start": 1.493,
+    "end": 1.621
+  },
+  {
+    "id": "w3",
+    "text": "hundred",
+    "start": 1.664,
+    "end": 1.792
+  },
+  {
+    "id": "w4",
+    "text": "dollars",
+    "start": 1.92,
+    "end": 2.0907
+  },
+  {
+    "id": "w5",
+    "text": "each,",
+    "start": 2.219,
+    "end": 2.624
+  },
+  {
+    "id": "w6",
+    "text": "every",
+    "start": 2.859,
+    "end": 3.072
+  },
+  {
+    "id": "w7",
+    "text": "round.",
+    "start": 3.2,
+    "end": 3.755
+  },
+  {
+    "id": "w8",
+    "text": "And",
+    "start": 4.096,
+    "end": 4.181
+  },
+  {
+    "id": "w9",
+    "text": "each",
+    "start": 4.224,
+    "end": 4.352
+  },
+  {
+    "id": "w10",
+    "text": "round,",
+    "start": 4.437,
+    "end": 4.8
+  },
+  {
+    "id": "w11",
+    "text": "one",
+    "start": 4.949,
+    "end": 5.291
+  },
+  {
+    "id": "w12",
+    "text": "of",
+    "start": 5.333,
+    "end": 5.376
+  },
+  {
+    "id": "w13",
+    "text": "them",
+    "start": 5.419,
+    "end": 5.504
+  },
+  {
+    "id": "w14",
+    "text": "takes",
+    "start": 5.589,
+    "end": 5.76
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 5.845,
+    "end": 5.9307
+  },
+  {
+    "id": "w16",
+    "text": "whole",
+    "start": 5.973,
+    "end": 6.144
+  },
+  {
+    "id": "w17",
+    "text": "pot.",
+    "start": 6.187,
+    "end": 6.501
+  }
+]

@@ -1,0 +1,75 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+      background: #eefef2;
+    }
+    .s8-line {
+      position: absolute;
+      left: 240px;
+      font-size: 128px;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      color: #0f3d1c;
+      line-height: 1;
+    }
+    #s8-l1 {
+      top: 250px;
+    }
+    #s8-l2 {
+      top: 430px;
+    }
+    #s8-l3 {
+      top: 650px;
+      font-weight: 600;
+    }
+    .s8-w {
+      display: inline-block;
+      opacity: 0;
+    }
+    #s8-l2 .s8-w {
+      opacity: 0;
+      color: #9fc4aa;
+    }
+    #s8-l3 {
+      opacity: 0;
+    }
+    #s8-rule {
+      position: absolute;
+      left: 240px;
+      top: 600px;
+      width: 900px;
+      height: 6px;
+      border-radius: 3px;
+      background: #2fbf5b;
+      transform-origin: left center;
+    }
+  </style>
+  <div data-hf-id="hf-rq2o" id="root" data-composition-id="s8" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-t1yh" class="s8-line" id="s8-l1"><span data-hf-id="hf-ka58" class="s8-w">0</span> <span data-hf-id="hf-ncl7" class="s8-w">admin</span> <span data-hf-id="hf-toa8" class="s8-w">keys</span></div>
+    <div data-hf-id="hf-x02i" class="s8-line" id="s8-l2"><span data-hf-id="hf-mg5w" class="s8-w">0</span> <span data-hf-id="hf-t35z" class="s8-w">middlemen</span></div>
+    <div data-hf-id="hf-epw7" id="s8-rule"></div>
+    <div data-hf-id="hf-v8qj" class="s8-line" id="s8-l3">Everyone gets paid.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+
+    // line 1: per word, blur in
+    gsap.utils.toArray("#s8-l1 .s8-w").forEach((el, i) => {
+      tl.fromTo(el, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out" }, V + 0.6 + i * 0.08);
+    });
+    // line 2: per word from light to ink
+    gsap.utils.toArray("#s8-l2 .s8-w").forEach((el, i) => {
+      tl.fromTo(el, { opacity: 0, color: "#9fc4aa" }, { opacity: 1, color: "#0f3d1c", duration: 0.22, ease: "power2.out" }, V + 1.54 + i * 0.2);
+    });
+    // line 3: the rule draws, then the whole line lands
+    tl.fromTo("#s8-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, V + 2.4);
+    tl.fromTo("#s8-l3", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, V + 2.69);
+
+    window.__timelines["s8"] = tl;
+  </script>
+</template>

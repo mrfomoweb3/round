@@ -1,0 +1,125 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+    #s3-plate {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 1500px no-repeat;
+    }
+    #s3-plate-deep {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 2100px no-repeat;
+      opacity: 0;
+    }
+    #s3-art {
+      position: absolute;
+      inset: 0;
+    }
+    .s3-seat {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      margin: -66px 0 0 -66px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0a1128;
+      font-size: 52px;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 40px rgba(10, 45, 15, 0.28);
+    }
+    #s3-word {
+      position: absolute;
+      left: 900px;
+      top: 330px;
+      font-size: 250px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      color: #6fe08f;
+      line-height: 1;
+    }
+    .s3-l {
+      display: inline-block;
+      opacity: 0;
+    }
+    #s3-labels {
+      position: absolute;
+      left: 590px;
+      top: 720px;
+      display: flex;
+      gap: 56px;
+      font-size: 46px;
+      font-weight: 300;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+    .s3-lab {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .s3-lab b {
+      font-weight: 600;
+    }
+    .s3-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #6fe08f;
+    }
+  </style>
+  <div data-hf-id="hf-3xc5" id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-jwv0" id="s3-plate"></div>
+    <div data-hf-id="hf-rbuv" id="s3-plate-deep"></div>
+    <svg data-hf-id="hf-9mhj" id="s3-art" viewBox="0 0 1920 1080" data-layout-ignore>
+      <circle data-hf-id="hf-795b" id="s3-ring" cx="1300" cy="540" r="330" fill="none" stroke="#3f8f55" stroke-width="22" />
+      <circle data-hf-id="hf-2zpa" id="s3-empty" cx="1300" cy="210" r="64" fill="#3f1a1a" stroke="#f87171" stroke-width="4" stroke-dasharray="14 10" />
+      <circle data-hf-id="hf-bf68" id="s3-dot" cx="807" cy="369" r="38" fill="#6fe08f" opacity="0" />
+    </svg>
+    <div data-hf-id="hf-k33u" class="s3-seat" id="s3-seat2" style="left: 1630px; top: 540px">2</div>
+    <div data-hf-id="hf-w36o" class="s3-seat" id="s3-seat3" style="left: 1300px; top: 870px">3</div>
+    <div data-hf-id="hf-v9t4" class="s3-seat" id="s3-seat4" style="left: 970px; top: 540px">4</div>
+
+    <div data-hf-id="hf-1hnc" id="s3-word"><span data-hf-id="hf-am9m" class="s3-l">r</span><span data-hf-id="hf-lcjd" class="s3-l">o</span><span data-hf-id="hf-clsr" class="s3-l">u</span><span data-hf-id="hf-lque" class="s3-l">n</span><span data-hf-id="hf-jd08" class="s3-l">d</span></div>
+
+    <div data-hf-id="hf-xiqt" id="s3-labels">
+      <div data-hf-id="hf-uyde" class="s3-lab" id="s3-lab1"><span data-hf-id="hf-emr9" class="s3-dot"></span>on <b data-hf-id="hf-5a8o">Mezo</b></div>
+      <div data-hf-id="hf-92rp" class="s3-lab" id="s3-lab2"><span data-hf-id="hf-rieh" class="s3-dot"></span>saves in <b data-hf-id="hf-2j2w">MUSD</b></div>
+      <div data-hf-id="hf-tzsx" class="s3-lab" id="s3-lab3"><span data-hf-id="hf-spbk" class="s3-dot"></span>secured by <b data-hf-id="hf-tj0d">Bitcoin</b></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+
+    // the circle folds into the Round mark (ring + payout dot)
+    tl.to(["#s3-seat2", "#s3-seat3", "#s3-seat4"], { scale: 0, opacity: 0, duration: 0.45, ease: "power3.in", stagger: 0.06 }, 0.05);
+    tl.to("#s3-empty", { attr: { r: 0 }, opacity: 0, duration: 0.4, ease: "power3.in" }, 0.05);
+    tl.to("#s3-plate-deep", { opacity: 1, duration: 0.9, ease: "power2.inOut" }, 0.1);
+    tl.to("#s3-ring", { attr: { cx: 700, cy: 470, r: 120, "stroke-width": 64, stroke: "#6fe08f" }, duration: 1.0, ease: "power3.inOut" }, 0.3);
+    tl.set("#s3-dot", { opacity: 1 }, V + 1.3);
+    tl.fromTo("#s3-dot", { attr: { r: 0 } }, { attr: { r: 38 }, duration: 0.4, ease: "back.out(2)" }, V + 1.3);
+
+    // wordmark, a letter at a time
+    gsap.utils.toArray("#s3-word .s3-l").forEach((el, i) => {
+      tl.fromTo(el, { opacity: 0.0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, V + 1.3 + i * 0.07);
+    });
+
+    // what it is, each landing as it is said
+    const lab = (sel, t) =>
+      tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, t);
+    lab("#s3-lab1", V + 3.0);
+    lab("#s3-lab2", V + 4.84);
+    lab("#s3-lab3", V + 6.06);
+
+    window.__timelines["s3"] = tl;
+  </script>
+</template>

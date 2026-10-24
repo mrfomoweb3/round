@@ -1,0 +1,87 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+    #s9-plate {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 2100px no-repeat;
+    }
+    #s9-art {
+      position: absolute;
+      inset: 0;
+    }
+    #s9-word {
+      position: absolute;
+      left: 900px;
+      top: 330px;
+      font-size: 250px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      color: #6fe08f;
+      line-height: 1;
+    }
+    .s9-l {
+      display: inline-block;
+      opacity: 0;
+    }
+    #s9-tag {
+      position: absolute;
+      left: 590px;
+      top: 700px;
+      font-size: 56px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      opacity: 0;
+    }
+    #s9-foot {
+      position: absolute;
+      left: 590px;
+      top: 800px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 34px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 0;
+    }
+    #s9-live {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #6fe08f;
+    }
+  </style>
+  <div data-hf-id="hf-dhfn" id="root" data-composition-id="s9" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-nevm" id="s9-plate"></div>
+    <svg data-hf-id="hf-llmp" id="s9-art" viewBox="0 0 1920 1080" data-layout-ignore>
+      <circle data-hf-id="hf-45de" id="s9-ring" cx="700" cy="470" r="120" fill="none" stroke="#6fe08f" stroke-width="64" stroke-dasharray="754" stroke-dashoffset="754" transform="rotate(-90 700 470)" />
+      <circle data-hf-id="hf-f0yq" id="s9-dot" cx="807" cy="369" r="38" fill="#6fe08f" opacity="0" />
+    </svg>
+    <div data-hf-id="hf-es6m" id="s9-word"><span data-hf-id="hf-qnrc" class="s9-l">r</span><span data-hf-id="hf-y7kv" class="s9-l">o</span><span data-hf-id="hf-nvm5" class="s9-l">u</span><span data-hf-id="hf-ylvw" class="s9-l">n</span><span data-hf-id="hf-umtm" class="s9-l">d</span></div>
+    <div data-hf-id="hf-vloi" id="s9-tag">Bitcoin-secured savings circles on Mezo</div>
+    <div data-hf-id="hf-7p1t" id="s9-foot"><span data-hf-id="hf-s70p" id="s9-live"></span>Built with MUSD · Live on Mezo testnet</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+
+    // the mark draws itself, the payout dot lands on "Round"
+    tl.to("#s9-ring", { attr: { "stroke-dashoffset": 0 }, duration: 0.85, ease: "power2.inOut" }, 0.1);
+    tl.set("#s9-dot", { opacity: 1 }, V + 0.7);
+    tl.fromTo("#s9-dot", { attr: { r: 0 } }, { attr: { r: 38 }, duration: 0.4, ease: "back.out(2)" }, V + 0.7);
+    gsap.utils.toArray("#s9-word .s9-l").forEach((el, i) => {
+      tl.fromTo(el, { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, V + 0.75 + i * 0.07);
+    });
+    tl.fromTo("#s9-tag", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power4.out" }, V + 1.64);
+    tl.fromTo("#s9-foot", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power4.out" }, V + 3.3);
+
+    window.__timelines["s9"] = tl;
+  </script>
+</template>

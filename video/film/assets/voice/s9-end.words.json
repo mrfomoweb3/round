@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w0",
+    "text": "Round.",
+    "start": 0.299,
+    "end": 0.917
+  },
+  {
+    "id": "w1",
+    "text": "Save",
+    "start": 1.237,
+    "end": 1.4507
+  },
+  {
+    "id": "w2",
+    "text": "together",
+    "start": 1.536,
+    "end": 1.749
+  },
+  {
+    "id": "w3",
+    "text": "in",
+    "start": 1.877,
+    "end": 1.9627
+  },
+  {
+    "id": "w4",
+    "text": "dollars.",
+    "start": 2.005,
+    "end": 2.517
+  },
+  {
+    "id": "w5",
+    "text": "Keep",
+    "start": 2.816,
+    "end": 3.029
+  },
+  {
+    "id": "w6",
+    "text": "your",
+    "start": 3.072,
+    "end": 3.157
+  },
+  {
+    "id": "w7",
+    "text": "Bitcoin.",
+    "start": 3.2,
+    "end": 3.733
+  }
+]

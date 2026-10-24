@@ -1,0 +1,301 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+      background: #eefef2;
+    }
+    #s7-ringworld {
+      position: absolute;
+      inset: 0;
+    }
+    #s7-plate {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 1500px no-repeat;
+    }
+    #s7-art {
+      position: absolute;
+      inset: 0;
+    }
+    .s7-seat {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      margin: -66px 0 0 -66px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0a1128;
+      font-size: 52px;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 40px rgba(10, 45, 15, 0.28);
+      z-index: 2;
+    }
+    #s7-seat1 {
+      background: #3f1a1a;
+      border: 4px solid #f87171;
+      color: #f87171;
+    }
+    #s7-seat2 {
+      background: #6fe08f;
+    }
+    #s7-vault {
+      position: absolute;
+      left: 1420px;
+      top: 64px;
+      width: 440px;
+      opacity: 0;
+    }
+    #s7-vault-label {
+      font-size: 28px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    #s7-vault-bar {
+      margin-top: 10px;
+      height: 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      overflow: hidden;
+    }
+    #s7-vault-fill {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: #f7931a;
+      transform-origin: left center;
+    }
+    #s7-vault-amt {
+      margin-top: 8px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    #s7-pot {
+      position: absolute;
+      left: 1300px;
+      top: 540px;
+      width: 300px;
+      height: 300px;
+      margin: -150px 0 0 -150px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      box-shadow: 0 24px 60px rgba(10, 45, 15, 0.3);
+      z-index: 3;
+    }
+    #s7-sum {
+      font-size: 84px;
+      font-weight: 600;
+      color: #0a1128;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    #s7-pot-label {
+      font-size: 30px;
+      color: #57534e;
+      margin-top: 6px;
+    }
+    #s7-btc {
+      position: absolute;
+      left: 1300px;
+      top: 210px;
+      width: 88px;
+      height: 88px;
+      margin: -44px 0 0 -44px;
+      border-radius: 50%;
+      background: #f7931a;
+      color: #ffffff;
+      font-size: 50px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 14px 30px rgba(120, 60, 0, 0.35);
+      opacity: 0;
+      z-index: 4;
+    }
+    .s7-pen {
+      position: absolute;
+      left: 1300px;
+      top: 210px;
+      width: 26px;
+      height: 26px;
+      margin: -13px 0 0 -13px;
+      border-radius: 50%;
+      background: #f7931a;
+      opacity: 0;
+      z-index: 4;
+    }
+    #s7-pen-label {
+      margin-top: 6px;
+      font-size: 28px;
+      font-weight: 500;
+      color: #ffffff;
+      opacity: 0;
+    }
+    #s7-title {
+      position: absolute;
+      left: 140px;
+      top: 380px;
+      font-size: 104px;
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      color: #ffffff;
+      line-height: 1.08;
+    }
+    .s7-w {
+      display: inline-block;
+      opacity: 0;
+    }
+    #s7-hl {
+      color: #6fe08f;
+      font-weight: 400;
+    }
+    #s7-paid {
+      position: absolute;
+      left: 140px;
+      top: 650px;
+      font-size: 44px;
+      font-weight: 400;
+      color: #ffffff;
+      opacity: 0;
+    }
+    #s7-paid b {
+      color: #6fe08f;
+      font-weight: 600;
+    }
+    #s7-proof {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+    #s7-proof-label {
+      position: absolute;
+      left: 240px;
+      top: 290px;
+      font-size: 52px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: #0f3d1c;
+    }
+    #s7-proof-card {
+      position: absolute;
+      left: 240px;
+      top: 400px;
+      width: 1440px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(15, 61, 28, 0.16);
+    }
+    #s7-proof-card img {
+      display: block;
+      width: 1440px;
+    }
+    .s7-box {
+      position: absolute;
+      left: 256px;
+      width: 1408px;
+      height: 66px;
+      border-radius: 14px;
+      border: 4px solid;
+      opacity: 0;
+    }
+    #s7-box-miss {
+      top: 576px;
+      border-color: #f87171;
+    }
+    #s7-box-paid {
+      top: 506px;
+      border-color: #2fbf5b;
+    }
+  </style>
+  <div data-hf-id="hf-6yl5" id="root" data-composition-id="s7" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-z1h2" id="s7-ringworld">
+      <div data-hf-id="hf-zlqg" id="s7-plate"></div>
+      <svg data-hf-id="hf-ppzn" id="s7-art" viewBox="0 0 1920 1080" data-layout-ignore>
+        <circle data-hf-id="hf-6pos" cx="1300" cy="540" r="330" fill="none" stroke="#6fe08f" stroke-width="22" />
+        <g data-hf-id="hf-73mb" id="s7-x" stroke="#f87171" stroke-width="7" stroke-linecap="round">
+          <circle data-hf-id="hf-ytbz" cx="1300" cy="318" r="36" fill="none" stroke-width="4" stroke-dasharray="10 8" />
+          <line data-hf-id="hf-q81n" x1="1284" y1="302" x2="1316" y2="334" />
+          <line data-hf-id="hf-dvqr" x1="1316" y1="302" x2="1284" y2="334" />
+        </g>
+      </svg>
+      <div data-hf-id="hf-me9p" id="s7-pot"><div data-hf-id="hf-xler" id="s7-sum">$200</div><div data-hf-id="hf-7i1t" id="s7-pot-label">round 2 pot</div></div>
+      <div data-hf-id="hf-1te0" class="s7-seat" id="s7-seat1" style="left: 1300px; top: 210px">1</div>
+      <div data-hf-id="hf-6zvu" class="s7-seat" id="s7-seat2" style="left: 1630px; top: 540px">2</div>
+      <div data-hf-id="hf-j2fk" class="s7-seat" id="s7-seat3" style="left: 1300px; top: 870px">3</div>
+      <div data-hf-id="hf-clqw" class="s7-seat" id="s7-seat4" style="left: 970px; top: 540px">4</div>
+      <div data-hf-id="hf-83ds" id="s7-vault">
+        <div data-hf-id="hf-g5dr" id="s7-vault-label">member 1's locked BTC</div>
+        <div data-hf-id="hf-hfps" id="s7-vault-bar"><div data-hf-id="hf-pa8a" id="s7-vault-fill"></div></div>
+        <div data-hf-id="hf-ipug" id="s7-vault-amt">0.00565 BTC</div>
+        <div data-hf-id="hf-pv2p" id="s7-pen-label">10% penalty → members 2, 3, 4</div>
+      </div>
+      <div data-hf-id="hf-hd2p" id="s7-btc"><svg data-hf-id="hf-u2tb" viewBox="0 0 64 64" width="56" height="56" data-layout-ignore><path data-hf-id="hf-abr9" d="M23 14v-6M31 14v-6M23 56v-6M31 56v-6" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path data-hf-id="hf-4kwu" d="M18 14h17c7 0 11 4 11 9s-3 8-7 9c5 1 9 4 9 10 0 6-5 10-12 10H18M18 14v38M18 32h19" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+      <div data-hf-id="hf-9u98" class="s7-pen" id="s7-pen2"></div>
+      <div data-hf-id="hf-alx1" class="s7-pen" id="s7-pen3"></div>
+      <div data-hf-id="hf-tdmq" class="s7-pen" id="s7-pen4"></div>
+      <div data-hf-id="hf-wuli" id="s7-title"><span data-hf-id="hf-pmg4" class="s7-w" id="s7-w1">Their</span> <span data-hf-id="hf-0wl2" class="s7-w" id="s7-hl">Bitcoin</span><br data-hf-id="hf-x5px" /><span data-hf-id="hf-5xty" class="s7-w" id="s7-w3">covers</span> <span data-hf-id="hf-1w16" class="s7-w" id="s7-w4">it.</span></div>
+    </div>
+
+    <div data-hf-id="hf-syku" id="s7-proof">
+      <div data-hf-id="hf-tfw9" id="s7-proof-label">And on-chain, it says exactly that:</div>
+      <div data-hf-id="hf-1qrh" id="s7-proof-card"><img data-hf-id="hf-5nhp" src="assets/ui/activity-top.png" alt="Activity: Round 2 settled, Member 2 received 200 MUSD + 0.001292 BTC; Member 1 missed round 2, 0.001375 BTC taken from their collateral" /></div>
+      <div data-hf-id="hf-okp3" class="s7-box" id="s7-box-miss"></div>
+      <div data-hf-id="hf-3x6h" class="s7-box" id="s7-box-paid"></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+    const word = (sel, t) =>
+      tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, t);
+
+    // "After the grace period": member 1's locked Bitcoin is shown
+    tl.fromTo("#s7-vault", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, V + 0.7);
+    word("#s7-w1", V + 1.98);
+    word("#s7-hl", V + 2.2);
+
+    // the coin leaves the vault on "takes the missed payment" and lands on "locked Bitcoin"
+    tl.fromTo("#s7-btc", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.6)" }, V + 2.53);
+    tl.to("#s7-btc", { y: -86, duration: 1.0, ease: "power2.out" }, V + 2.6);
+    tl.to("#s7-btc", { y: 330, scale: 1.25, duration: 0.6, ease: "power3.in" }, V + 3.64);
+    tl.to("#s7-btc", { opacity: 0, duration: 0.06 }, V + 4.24);
+    tl.set("#s7-sum", { textContent: "$300" }, V + 4.24);
+    tl.fromTo("#s7-pot", { scale: 1.12 }, { scale: 1, duration: 0.45, ease: "expo.out", immediateRender: false }, V + 4.24);
+    tl.to("#s7-vault-fill", { scaleX: 0.757, duration: 0.4, ease: "power3.out" }, V + 4.24);
+    tl.set("#s7-vault-amt", { textContent: "0.004275 BTC left" }, V + 4.24);
+    word("#s7-w3", V + 4.3);
+    word("#s7-w4", V + 4.45);
+
+    // the 10% penalty goes to the honest members
+    tl.fromTo("#s7-pen-label", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, V + 6.12);
+    [["#s7-pen2", 1630, 540], ["#s7-pen3", 1300, 870], ["#s7-pen4", 970, 540]].forEach(([sel, x, y], i) => {
+      const t = V + 6.15 + i * 0.12;
+      tl.set(sel, { opacity: 1 }, t);
+      tl.to(sel, { x: x - 1300, y: y - 210, duration: 0.4, ease: "power2.inOut" }, t);
+      tl.to(sel, { opacity: 0, duration: 0.06 }, t + 0.4);
+    });
+
+    // "Member two still gets paid": the pot goes to seat 2
+    tl.to("#s7-vault", { opacity: 0, duration: 0.2, ease: "power3.in" }, 8.45);
+    tl.to("#s7-pot", { x: 200, y: 0, scale: 0.46, duration: 0.6, ease: "power3.inOut" }, V + 7.62);
+    tl.to("#s7-pot-label", { opacity: 0, duration: 0.15 }, V + 7.62);
+
+    // cut to the real feed
+    tl.to("#s7-ringworld", { opacity: 0, filter: "blur(14px)", duration: 0.2, ease: "power3.in" }, 8.85);
+    tl.set("#s7-proof", { opacity: 1 }, 9.0);
+    tl.fromTo("#s7-proof-card", { scale: 1.05, filter: "blur(10px)" }, { scale: 1, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 9.0);
+    tl.fromTo("#s7-proof-label", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 9.15);
+    tl.fromTo("#s7-box-miss", { opacity: 0, scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, 9.7);
+    tl.fromTo("#s7-box-paid", { opacity: 0, scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, 10.3);
+
+    window.__timelines["s7"] = tl;
+  </script>
+</template>

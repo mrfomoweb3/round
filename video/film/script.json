@@ -1,0 +1,11 @@
+[
+  {"id": "s1-circle",  "text": "Four friends. A hundred dollars each, every round. And each round, one of them takes the whole pot."},
+  {"id": "s2-break",   "text": "It works. Until someone takes the pot early, and stops paying. That's where savings circles break."},
+  {"id": "s3-round",   "text": "This is Round. Savings circles on Mezo, where everyone saves in MUSD, and locks Bitcoin as their promise."},
+  {"id": "s4-join",    "text": "To join, you lock Bitcoin worth one and a half times what you could owe. Mezo's price feed sets the amount."},
+  {"id": "s5-pay",     "text": "Each round, you pay MUSD with one signature. When the round is due, anyone can settle, and the pot goes out."},
+  {"id": "s6-skip",    "text": "Now, member one takes the first pot, then skips round two."},
+  {"id": "s7-covered", "text": "After the grace period, Round takes the missed payment from their locked Bitcoin, plus a ten percent penalty. Member two still gets paid."},
+  {"id": "s8-claim",   "text": "No admin. No middleman. The group stays whole."},
+  {"id": "s9-end",     "text": "Round. Save together in dollars. Keep your Bitcoin."}
+]

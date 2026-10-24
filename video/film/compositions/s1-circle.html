@@ -1,0 +1,173 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Inter", sans-serif;
+    }
+    #s1-plate {
+      position: absolute;
+      inset: 0;
+      background: url("assets/bg.png") top center / 1920px 1500px no-repeat;
+    }
+    #s1-ring {
+      position: absolute;
+      inset: 0;
+    }
+    .s1-seat {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      margin: -66px 0 0 -66px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0a1128;
+      font-size: 52px;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 40px rgba(10, 45, 15, 0.28);
+      z-index: 2;
+    }
+    #s1-seat1-fill {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #6fe08f;
+      opacity: 0;
+    }
+    .s1-num {
+      position: relative;
+    }
+    #s1-pot {
+      position: absolute;
+      left: 1300px;
+      top: 540px;
+      width: 300px;
+      height: 300px;
+      margin: -150px 0 0 -150px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      box-shadow: 0 24px 60px rgba(10, 45, 15, 0.3);
+      z-index: 3;
+    }
+    #s1-pot-sum {
+      font-size: 84px;
+      font-weight: 600;
+      color: #0a1128;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    #s1-pot-label {
+      font-size: 30px;
+      color: #57534e;
+      margin-top: 6px;
+    }
+    .s1-coin {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      margin: -36px 0 0 -36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 5px solid #2fbf5b;
+      color: #0f3d1c;
+      font-size: 34px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+    }
+    #s1-title {
+      position: absolute;
+      left: 140px;
+      top: 330px;
+      color: #ffffff;
+    }
+    #s1-line1 {
+      font-size: 112px;
+      font-weight: 300;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+    }
+    #s1-line2 {
+      margin-top: 28px;
+      font-size: 60px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.88);
+    }
+    .s1-w {
+      display: inline-block;
+      opacity: 0;
+    }
+    #s1-line2 .s1-accent {
+      color: #ffffff;
+      font-weight: 600;
+    }
+  </style>
+  <div data-hf-id="hf-3pu3" id="root" data-composition-id="s1" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-ecvu" id="s1-plate"></div>
+    <svg data-hf-id="hf-4n7c" id="s1-ring" viewBox="0 0 1920 1080" data-layout-ignore>
+      <circle data-hf-id="hf-6pos" cx="1300" cy="540" r="330" fill="none" stroke="#6fe08f" stroke-width="22" />
+    </svg>
+
+    <div data-hf-id="hf-oqmj" id="s1-pot"><div data-hf-id="hf-sbfl" id="s1-pot-sum">$0</div><div data-hf-id="hf-7n5y" id="s1-pot-label">the pot</div></div>
+
+    <div data-hf-id="hf-iqhw" class="s1-coin" id="s1-coin2" style="left: 1630px; top: 540px">$</div>
+    <div data-hf-id="hf-0c2p" class="s1-coin" id="s1-coin3" style="left: 1300px; top: 870px">$</div>
+    <div data-hf-id="hf-22sk" class="s1-coin" id="s1-coin4" style="left: 970px; top: 540px">$</div>
+
+    <div data-hf-id="hf-bpyl" class="s1-seat" id="s1-seat1" style="left: 1300px; top: 210px"><div data-hf-id="hf-ck2k" id="s1-seat1-fill"></div><span data-hf-id="hf-7l61" class="s1-num">1</span></div>
+    <div data-hf-id="hf-xoag" class="s1-seat" id="s1-seat2" style="left: 1630px; top: 540px"><span data-hf-id="hf-8s34" class="s1-num">2</span></div>
+    <div data-hf-id="hf-6vvz" class="s1-seat" id="s1-seat3" style="left: 1300px; top: 870px"><span data-hf-id="hf-8ds3" class="s1-num">3</span></div>
+    <div data-hf-id="hf-aomw" class="s1-seat" id="s1-seat4" style="left: 970px; top: 540px"><span data-hf-id="hf-6e8y" class="s1-num">4</span></div>
+
+    <div data-hf-id="hf-6rtc" id="s1-title">
+      <div data-hf-id="hf-l7o5" id="s1-line1"><span data-hf-id="hf-dtjs" class="s1-w" id="s1-w1">Four</span> <span data-hf-id="hf-uo6i" class="s1-w" id="s1-w2">friends.</span></div>
+      <div data-hf-id="hf-p5s6" id="s1-line2">
+        <span data-hf-id="hf-7cl9" class="s1-w" id="s1-w3"><span data-hf-id="hf-cfkn" class="s1-accent">$100</span> each,</span>
+        <span data-hf-id="hf-4ix6" class="s1-w" id="s1-w4">every round.</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const V = 0; // word times below already include the voice offset
+    tl.set("#s1-pot", { scale: 1, x: 0, y: 0 }, 0);
+    const word = (sel, t) =>
+      tl.fromTo(sel, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out" }, t);
+
+    tl.set(["#s1-w1", "#s1-w2"], { opacity: 1, filter: "blur(0px)" }, 0);
+    word("#s1-w3", V + 2.06);
+    word("#s1-w4", V + 3.26);
+
+    // three members pay in (the recipient never pays themselves)
+    const pot = { v: 0 };
+    const sum = document.querySelector("#s1-pot-sum");
+    const pay = (coin, fromX, fromY, t) => {
+      tl.fromTo(coin, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.12, ease: "power2.out" }, t);
+      tl.to(coin, { x: 1300 - fromX, duration: 0.5, ease: "power2.inOut" }, t);
+      tl.to(coin, { y: 540 - fromY, duration: 0.5, ease: "power3.in" }, t);
+      tl.to(coin, { opacity: 0, scale: 0.6, duration: 0.08, ease: "power2.in" }, t + 0.44);
+    };
+    pay("#s1-coin2", 1630, 540, 2.06);
+    pay("#s1-coin3", 1300, 870, 2.31);
+    pay("#s1-coin4", 970, 540, 2.56);
+    [2.56, 2.81, 3.06].forEach((t, i) => {
+      tl.set(sum, { textContent: "$" + (i + 1) * 100 }, t);
+      tl.fromTo("#s1-pot", { scale: 1.06 }, { scale: 1, duration: 0.22, ease: "expo.out", immediateRender: false }, t);
+    });
+
+    // "one of them takes the whole pot": seat 1 lights, the pot travels to it
+    tl.to("#s1-seat1-fill", { opacity: 1, duration: 0.35, ease: "power2.out" }, V + 5.35);
+    tl.to("#s1-pot", { x: 0, y: 330 - 540, scale: 0.46, duration: 0.6, ease: "power3.inOut" }, V + 5.99);
+    tl.to("#s1-pot-label", { opacity: 0, duration: 0.15 }, V + 5.99);
+
+    window.__timelines["s1"] = tl;
+  </script>
+</template>

@@ -1,0 +1,47 @@
+# ── Secrets (testnet keys live in contracts/.env — never commit) ──
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Contracts (Foundry) ──
+contracts/out/
+contracts/cache/
+contracts/broadcast/*/31337/
+contracts/broadcast/**/dry-run/
+contracts/lcov.info
+contracts/coverage/
+
+# ── Web (Next.js) ──
+node_modules/
+.next/
+.next-*/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# ── Video project (HyperFrames caches and intermediate renders) ──
+video/film/.hyperframes/
+video/film/renders/
+video/film/node_modules/
+video/film/.media/
+video/film/.waveform-cache/
+video/film/.thumbnails/
+
+# ── Logs ──
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── OS / editors ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

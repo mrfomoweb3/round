@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 const nextConfig: NextConfig = {
+  // Static site for Cloudflare Pages: `npm run build` writes ./out
+  output: "export",
+  trailingSlash: true,
   outputFileTracingRoot: path.join(__dirname),
   // lets a second dev server (e.g. one pointed at a local chain) run without sharing .next
   distDir: process.env.NEXT_DIST_DIR || ".next",

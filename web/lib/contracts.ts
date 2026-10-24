@@ -1,8 +1,9 @@
 import { erc20Abi, type Address } from "viem";
 
-export const ROUND_ADDRESS = (process.env.NEXT_PUBLIC_ROUND_ADDRESS ?? "0x0000000000000000000000000000000000000000") as Address;
-export const ROUND_DEPLOY_BLOCK = BigInt(process.env.NEXT_PUBLIC_ROUND_DEPLOY_BLOCK ?? "0");
-export const DEMO_CIRCLE_ID = process.env.NEXT_PUBLIC_DEMO_CIRCLE_ID ? BigInt(process.env.NEXT_PUBLIC_DEMO_CIRCLE_ID) : undefined;
+// Defaults point at the Round deployment on Mezo testnet, so a hosted build needs no configuration.
+export const ROUND_ADDRESS = (process.env.NEXT_PUBLIC_ROUND_ADDRESS || "0xfaf2003837bb3db7ae63cf1a4a26d0dd9790254e") as Address;
+export const ROUND_DEPLOY_BLOCK = BigInt(process.env.NEXT_PUBLIC_ROUND_DEPLOY_BLOCK || "16329740");
+export const DEMO_CIRCLE_ID = BigInt(process.env.NEXT_PUBLIC_DEMO_CIRCLE_ID || "1");
 
 export const MUSD_ADDRESS = "0x118917a40FAF1CD7a13dB0Ef56C86De7973Ac503" as Address;
 export const PRICE_FEED_ADDRESS = "0x86bCF0841622a5dAC14A313a15f96A95421b9366" as Address;

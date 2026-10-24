@@ -233,6 +233,18 @@ npm run dev                    # http://localhost:3000
 Get test BTC at <https://faucet.test.mezo.org> and test MUSD at <https://testnet.mezo.org>. When you connect, your wallet is
 asked to add Mezo Testnet (chain 31611) automatically.
 
+**Host it on Cloudflare Pages.** The app is a static export, and with no environment variables it points at the testnet
+deployment above:
+
+```bash
+cd web
+npx wrangler login     # once
+npm run deploy         # next build → wrangler pages deploy out --project-name round
+```
+
+Or connect the GitHub repo in the Cloudflare dashboard: root directory `web`, build command `npm run build`, output
+directory `out`.
+
 **Contracts** (Foundry):
 
 ```bash

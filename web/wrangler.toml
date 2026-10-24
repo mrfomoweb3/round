@@ -1,0 +1,4 @@
+# Cloudflare Pages: static export of the Next.js app (`npm run build` writes ./out)
+name = "round"
+pages_build_output_dir = "out"
+compatibility_date = "2026-10-01"

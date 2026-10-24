@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build && npx --yes wrangler@3 pages deploy out --project-name round"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.11",

@@ -6,9 +6,9 @@
 
 **Save in dollars with people you don't fully trust, without selling your Bitcoin.**
 
-[![Watch the 68-second demo](docs/screenshots/video-poster.png)](video/round-demo.mp4)
+[![Watch the 68-second demo](docs/screenshots/video-poster.png)](https://youtu.be/Gs2QBHjdmqo)
 
-[▶ Watch the demo (68 s)](video/round-demo.mp4) · [Contract on Mezo testnet](https://explorer.test.mezo.org/address/0xfaf2003837bb3db7ae63cf1a4a26d0dd9790254e) · [Verified source (Sourcify)](https://repo.sourcify.dev/31611/0xfaF2003837bB3Db7ae63CF1A4a26d0DD9790254e)
+[▶ Watch the demo on YouTube (68 s)](https://youtu.be/Gs2QBHjdmqo) · [Contract on Mezo testnet](https://explorer.test.mezo.org/address/0xfaf2003837bb3db7ae63cf1a4a26d0dd9790254e) · [Verified source (Sourcify)](https://repo.sourcify.dev/31611/0xfaF2003837bB3Db7ae63CF1A4a26d0DD9790254e)
 
 </div>
 

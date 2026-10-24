@@ -21,9 +21,9 @@ Explorer: https://explorer.test.mezo.org/address/0xfaf2003837bb3db7ae63cf1a4a26d
 Verified source (Sourcify, exact match): https://repo.sourcify.dev/31611/0xfaF2003837bB3Db7ae63CF1A4a26d0DD9790254e
 
 **Links**
-- Code: `<GitHub repo URL>`
+- Code: https://github.com/mrfomoweb3/round
 - Live app: `<hosted app URL>`
-- Demo video: video/round-demo.mp4 in the repo (68 s). Upload it to YouTube or AKINDO as well.
+- Demo video (68 s): https://youtu.be/Gs2QBHjdmqo (also in the repo: video/round-demo.mp4)
 
 **How it works**
 Members lock native BTC worth 150% of the most they could owe, sized live by Mezo's PriceFeed. Each round, everyone except
